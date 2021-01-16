@@ -13,10 +13,11 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode(of = "id")
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Account {
 
     @Id @GeneratedValue
-    private String id;
+    private Long id;
     private String password;
 
     @Column(unique = true)
